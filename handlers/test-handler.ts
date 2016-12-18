@@ -1,18 +1,14 @@
-import {CommandHandler} from "../infrastructure/command-handler"
+import { CommandHandler } from "../infrastructure/command-handler"
 import container from "../infrastructure/handler-container";
-
-// namespace Test {
-
-// }
 
 class TestHandler implements CommandHandler<TestRequest, TestResponse> {
 
     Handle(request: TestRequest): TestResponse {
         var result = new TestResponse();
 
-        if (request.Id > 0){
+        if (request.Id > 0) {
             result.message = "Hello positive number";
-        } else{
+        } else {
             result.message = "Hello zero or negative number";
         }
 
@@ -21,7 +17,7 @@ class TestHandler implements CommandHandler<TestRequest, TestResponse> {
 }
 
 
-export class TestRequest{
+export class TestRequest {
     Id: number;
 }
 
