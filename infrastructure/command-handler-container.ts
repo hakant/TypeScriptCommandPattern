@@ -1,6 +1,6 @@
 import {CommandHandler} from "./command-handler"
 
-class HandlerContainer {
+class CommandHandlerContainer {
     private kernel = {};
 
     RegisterHandler<TRequest>(request: { new(): TRequest; }, handler: CommandHandler<TRequest,any>) {
@@ -19,6 +19,6 @@ class HandlerContainer {
     }
 }
 
-let singletonContainer = new HandlerContainer();
+let singletonContainer = new CommandHandlerContainer();
 export default singletonContainer;
 

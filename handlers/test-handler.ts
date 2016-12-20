@@ -1,5 +1,5 @@
 import { CommandHandler } from "../infrastructure/command-handler"
-import container from "../infrastructure/handler-container";
+import container from "../infrastructure/command-handler-container";
 
 class TestHandler implements CommandHandler<TestRequest, TestResponse> {
 

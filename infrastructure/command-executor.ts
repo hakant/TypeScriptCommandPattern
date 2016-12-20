@@ -1,4 +1,4 @@
-import container from "./handler-container";
+import container from "./command-handler-container";
 
 class CommandExecutor {
 
