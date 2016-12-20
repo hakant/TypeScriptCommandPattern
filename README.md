@@ -8,8 +8,7 @@ is invoked with an expected TResponse.
 
 ## Handlers
 
-As seen in the example handler [test-handler.ts](https://github.com/hakant/TypeScriptCommandPattern/blob/master/handlers/test-handler.ts),
-each handler is responsible with initialize and register itself in a singleton manner.
+As seen in the example handler [test-handler.ts](https://github.com/hakant/TypeScriptCommandPattern/blob/master/handlers/test-handler.ts), each handler is responsible with initializing and registering itself in a singleton manner.
 
 ## A very simple Container
 
