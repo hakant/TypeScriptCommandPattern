@@ -6,19 +6,14 @@ class TestHandler implements CommandHandler<TestRequest, TestResponse> {
     Handle(request: TestRequest): TestResponse {
         var result = new TestResponse();
 
-        if (request.Id > 0) {
-            result.message = "Hello positive number";
-        } else {
-            result.message = "Hello zero or negative number";
-        }
+        result.message = `Hello ${request.name}!`;
 
         return result;
     }
 }
 
-
 export class TestRequest {
-    Id: number;
+    name: string;
 }
 
 export class TestResponse {
@@ -26,6 +21,6 @@ export class TestResponse {
 }
 
 let testHandler = new TestHandler();
-container.RegisterHandler(new TestRequest().constructor['name'], testHandler);
+container.RegisterHandler(TestRequest, testHandler);
 
 export default testHandler;
