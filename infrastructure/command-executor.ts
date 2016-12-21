@@ -7,6 +7,11 @@ class CommandExecutor {
         return handler.Handle(request);
     }
 
+    async ExecuteAsync<TRequest, TResponse>(request: TRequest): Promise<TResponse> {
+        let handler = container.ResolveAsyncHandler<TRequest, TResponse>(request);
+        return await handler.HandleAsync(request);
+    }
+
 }
 
 let executor = new CommandExecutor();
